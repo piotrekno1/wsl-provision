@@ -1,8 +1,8 @@
 base:
   '*':
     - shell
-    # - python
+    - python
     - vim
-    # - git
+    - git
     - zsh
     - docker
