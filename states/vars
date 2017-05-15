@@ -1,0 +1,7 @@
+{% set user = 'piotrekno1' %}
+{% set home_dir = salt['environ.get']('HOME') %}
+
+{% set vars = {
+  'user' : user,
+  'home_dir' : home_dir,
+} %}

@@ -1,0 +1,8 @@
+[user]
+	email = piotrekno1@gmail.com
+	name = Piotr Duda
+[alias]
+  st = status
+  co = checkout
+[push]
+	default = matching
