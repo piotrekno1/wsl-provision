@@ -3,7 +3,7 @@
 python-ppa:
   pkgrepo.managed:
     - humanname: Python PPA
-    - name: deb http://ppa.launchpad.net/fkrull/deadsnakes/ubuntu trusty main
+    - name: deb http://ppa.launchpad.net/fkrull/deadsnakes/ubuntu {{vars.ubuntu_version}} main
     - file: /etc/apt/sources.list.d/python.list
     - keyid: DB82666C
     - keyserver: keyserver.ubuntu.com
@@ -11,7 +11,7 @@ python-ppa:
 python-2.7-ppa:
   pkgrepo.managed:
     - humanname: Python 2.7 PPA
-    - name: deb http://ppa.launchpad.net/fkrull/deadsnakes-2.7/ubuntu trusty main
+    - name: deb http://ppa.launchpad.net/fkrull/deadsnakes-python2.7/ubuntu {{vars.ubuntu_version}} main
     - file: /etc/apt/sources.list.d/python27.list
     - keyid: DB82666C
     - keyserver: keyserver.ubuntu.com

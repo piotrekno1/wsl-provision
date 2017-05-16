@@ -9,15 +9,11 @@ oh-my-zsh-clone:
     - rev: master
     - target: {{ vars.home_dir }}/.oh-my-zsh
     - depth: 1
-  # cmd.run:
-  # - name: ln -s /opt/zsh-antigen/antigen.zsh ~/.antigen.zsh
 
 zsh-zshrc:
   file.managed:
     - name: {{ vars.home_dir }}/.zshrc
     - source: salt://zsh/zshrc
-    - user: {{ vars.user }}
-    - group: {{ vars.user }}
 
 zsh-set-default-shell:
   cmd.run:

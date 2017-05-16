@@ -1,7 +1,9 @@
 {% set user = 'piotrekno1' %}
 {% set home_dir = salt['environ.get']('HOME') %}
+{% set ubuntu_version = 'trusty' %}
 
 {% set vars = {
   'user' : user,
   'home_dir' : home_dir,
+  'ubuntu_version': ubuntu_version,
 } %}

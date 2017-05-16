@@ -1,0 +1,10 @@
+language: python
+python:
+  - '2.7'
+
+before_install:
+  - sudo apt-get update
+  - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
+
+script:
+  - sudo salt-call --local --file-root=./states state.highstate --retcode-passthrough
