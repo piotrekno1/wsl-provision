@@ -6,6 +6,7 @@ python:
 
 before_install:
   - sudo apt-get update
+  - sudo apt-get uninstall npm
   - sudo apt-get install libffi-dev
   - pip install pyOpenSSL ndg-httpsclient pyasn1
   - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
