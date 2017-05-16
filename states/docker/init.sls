@@ -8,6 +8,9 @@ extract-docker:
     - source: https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz
     - if_missing: {{vars.home_dir}}/bin/docker
     - skip_verify: True
+    - require:
+      - pkgrepo: python-ppa
+
 
 docker-compose:
     file.managed:
@@ -15,3 +18,5 @@ docker-compose:
       - source: https://github.com/docker/compose/releases/download/1.12.0/docker-compose-Linux-x86_64
       - skip_verify: True
       - makedirs: True
+      - require:
+        - pkgrepo: python-ppa
