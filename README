@@ -2,6 +2,11 @@ Install saltstack:
 
 wget -qO- https://bootstrap.saltstack.com | sudo sh -s -- -P -d git develop
 
-Run saltstack:
+Fill out templating info:
+
+cp states/vars.template states/vars
+vim states/vars
+
+Once done, run saltstack:
 
 sudo salt-call --local --file-root=./states state.highstate

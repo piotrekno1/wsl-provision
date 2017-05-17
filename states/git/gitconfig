@@ -1,6 +1,6 @@
 [user]
-	email = piotrekno1@gmail.com
-	name = Piotr Duda
+	email = {{email}}
+	name = {{firstname}} {{lastname}}
 [alias]
   st = status
   co = checkout

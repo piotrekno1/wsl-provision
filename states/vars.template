@@ -2,10 +2,10 @@
 {% set ubuntu_version = 'trusty' %}
 
 {% set vars = {
-  'user' : 'piotrekno1',
-  'firstname': 'Piotr',
-  'lastname': 'Duda',
-  'email': 'piotrekno1@gmail.com',
+  'user' : 'default_user',
+  'firstname': 'default',
+  'lastname': 'user',
+  'email': 'default_user@test.com',
   'home_dir' : home_dir,
   'ubuntu_version': ubuntu_version,
 } %}

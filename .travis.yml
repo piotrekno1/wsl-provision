@@ -5,11 +5,11 @@ python:
   - '2.7'
 
 before_install:
-  - sudo apt-get update
   - easy_install pyOpenSSL
   - easy_install ndg-httpsclient
   - easy_install pyasn1
   - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
+  - cp states/vars.template states/vars
 
 script:
   - sudo salt-call --local --file-root=./states state.highstate --retcode-passthrough
