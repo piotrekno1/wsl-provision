@@ -65,7 +65,7 @@ export LC_CTYPE="en_US.UTF-8"
 # Link all the binaries from local bin
 export PATH=$PATH:~/bin/docker/docker:~/bin/docker-compose:~/bin/golang/go/bin
 
-# Switch docker to work with Windows docker host
+# Switch wls-docker to work with Windows docker host
 export DOCKER_HOST=tcp://0.0.0.0:2375
 
 # Preferred editor for local and remote sessions

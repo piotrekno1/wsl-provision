@@ -51,6 +51,12 @@ python-pip:
     - require:
       - pkgrepo: python-ppa
 
+pip:
+  pip.installed:
+    - upgrade: True
+    - require:
+       - pkg: python-pip
+
 python-tox:
   pkg.installed:
     - require:

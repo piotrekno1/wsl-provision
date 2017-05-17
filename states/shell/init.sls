@@ -10,6 +10,9 @@ silversearcher-ag:
 tree:
   pkg.installed
 
+tig:
+  pkg.installed
+
 htop:
   pkg.installed
 

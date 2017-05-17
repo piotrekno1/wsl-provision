@@ -1,5 +1,5 @@
 {% set home_dir = salt['environ.get']('HOME') %}
-{% set ubuntu_version = 'trusty' %}
+{% set ubuntu_version = salt['grains.get']('lsb_distrib_codename') %}
 
 {% set vars = {
   'user' : 'default_user',
