@@ -8,14 +8,6 @@ python-ppa:
     - keyid: DB82666C
     - keyserver: keyserver.ubuntu.com
 
-python-2.7-ppa:
-  pkgrepo.managed:
-    - humanname: Python 2.7 PPA
-    - name: deb http://ppa.launchpad.net/fkrull/deadsnakes-python2.7/ubuntu {{vars.ubuntu_version}} main
-    - file: /etc/apt/sources.list.d/python27.list
-    - keyid: DB82666C
-    - keyserver: keyserver.ubuntu.com
-
 python3.6:
   pkg.installed:
     - require:
@@ -36,15 +28,13 @@ python3.5-dev:
     - require:
       - pkgrepo: python-ppa
 
-python2.7:
-  pkg.installed:
-    - require:
-      - pkgrepo: python-2.7-ppa
-
 python2.7-dev:
+  pkg.installed
+
+python3-pip:
   pkg.installed:
     - require:
-      - pkgrepo: python-2.7-ppa
+      - pkgrepo: python-ppa
 
 python-pip:
   pkg.installed:
@@ -56,6 +46,12 @@ pip:
     - upgrade: True
     - require:
        - pkg: python-pip
+
+ipython:
+  pip.installed:
+    - upgrade: True
+    - require:
+      - pkg: python-pip
 
 python-tox:
   pkg.installed:

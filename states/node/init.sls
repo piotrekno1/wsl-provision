@@ -1,5 +1,5 @@
 nodejs:
   pkg.installed
 
-npm:
-  pkg.installed
+# npm:
+#   pkg.installed
