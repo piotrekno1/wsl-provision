@@ -21,3 +21,6 @@ mc:
 
 shellcheck:
   pkg.installed
+
+valgrind:
+  pkg.installed

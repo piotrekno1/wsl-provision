@@ -5,6 +5,8 @@ base:
     - python
     - node
     - golang
+    - clang
+    - cython
     - rust
     - vim
     - git

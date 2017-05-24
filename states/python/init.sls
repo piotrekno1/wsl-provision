@@ -8,36 +8,27 @@ python-ppa:
     - keyid: DB82666C
     - keyserver: keyserver.ubuntu.com
 
-python3.6:
+python:
   pkg.installed:
+    - pkgs:
+        - python3.6
+        - python3.5
+        - python2.7
     - require:
       - pkgrepo: python-ppa
 
-python3.6-dev:
+python-dev:
   pkg.installed:
-    - require:
-      - pkgrepo: python-ppa
-
-python3.5:
-  pkg.installed:
-    - require:
-      - pkgrepo: python-ppa
-
-python3.5-dev:
-  pkg.installed:
-    - require:
-      - pkgrepo: python-ppa
-
-python2.7-dev:
-  pkg.installed
-
-python3-pip:
-  pkg.installed:
-    - require:
-      - pkgrepo: python-ppa
+    - pkgs:
+        - python3.6-dev
+        - python3.5-dev
+        - python2.7-dev
 
 python-pip:
   pkg.installed:
+    - pkgs:
+        - python-pip
+        - python3-pip
     - require:
       - pkgrepo: python-ppa
 
@@ -53,7 +44,16 @@ ipython:
     - require:
       - pkg: python-pip
 
+mypy:
+  pip.installed:
+    - upgrade: True
+    # This only works with pip3
+    - bin_env: '/usr/bin/pip3'
+    - require:
+        - pkg: python-pip
+
 python-tox:
   pkg.installed:
     - require:
       - pkgrepo: python-ppa
+
