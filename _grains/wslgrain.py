@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import udpa
 
 
 def is_wsl_host():

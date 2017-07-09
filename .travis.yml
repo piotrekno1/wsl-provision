@@ -5,8 +5,8 @@ python:
   - '2.7'
 
 before_install:
-  - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
+  - sh setup.sh
   - cp states/vars.template states/vars
 
 script:
-  - sudo salt-call --local --file-root=./states state.highstate --retcode-passthrough
+  - sh install.sh

@@ -9,5 +9,6 @@ ultimate-vim-clone:
     - rev: master
     - target: {{ vars.home_dir }}/.vim_runtime
     - depth: 1
+    - force_reset: True
   cmd.run:
   - name: sh ~/.vim_runtime/install_awesome_vimrc.sh

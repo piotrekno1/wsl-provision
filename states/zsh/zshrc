@@ -71,6 +71,13 @@ export DOCKER_HOST=tcp://0.0.0.0:2375
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
+# Apply the shell syntax higlighting fixes
+eval `dircolors ~/.dircolors-solarized/dircolors.256dark`
+
+# Start the SSH agent and load all the keys from ~/.ssh dir
+eval `ssh-agent -s`
+ssh-add ~/.ssh/*_rsa
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
