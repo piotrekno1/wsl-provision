@@ -75,8 +75,8 @@ export EDITOR='vim'
 eval `dircolors ~/.dircolors-solarized/dircolors.256dark`
 
 # Start the SSH agent and load all the keys from ~/.ssh dir
-eval `ssh-agent -s`
-ssh-add ~/.ssh/*_rsa
+eval `ssh-agent -s` >/dev/null
+ssh-add ~/.ssh/*_rsa  >/dev/null
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
